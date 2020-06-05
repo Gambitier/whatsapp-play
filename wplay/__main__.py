@@ -51,28 +51,10 @@ def get_arg_parser():
 
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
-        "-wc",
-        "--terminal-chat",
+        "-wa",
+        "--about-changer",
         action="store_true",
-        help="chatting from command line")
-
-    group.add_argument(
-        "-wi",
-        "--chat-intermediator",
-        action="store_true",
-        help='Be an Intermediator from command line -wi -s <sender> -r <receiver> ')
-
-    group.add_argument(
-        "-wpd",
-        "--profile-download",
-        action="store_true",
-        help='Download the peofile picture of target')
-
-    group.add_argument(
-        "-wms",
-        "--message-service",
-        action="store_true",
-        help="send messages from a JSON file")
+        help="Changes the about section")
 
     group.add_argument(
         "-wb",
@@ -81,40 +63,22 @@ def get_arg_parser():
         help="message blast to a person")
 
     group.add_argument(
-        "-wti",
-        "--message-timer",
+        "-wbc",
+        "--broadcast",
         action="store_true",
-        help="send messages from time to time")
+        help="Broadcast message")
+    
+    group.add_argument(
+        "-wc",
+        "--terminal-chat",
+        action="store_true",
+        help="chatting from command line")
 
     group.add_argument(
-        "-wt",
-        "--online-tracker",
+        "-wd",
+        "--download-media",
         action="store_true",
-        help="track online status of person")
-
-    group.add_argument(
-        "-wtb",
-        "--telegram-bot",
-        action="store_true",
-        help="sends tracking status to telegram bot")
-
-    group.add_argument(
-        "-wsc",
-        "--save-chat",
-        action="store_true",
-        help="save all chats from Google Drive, target is necessary")
-
-    group.add_argument(
-        "-ws",
-        "--schedule-message",
-        action="store_true",
-        help="send the message at scheduled time")
-
-    group.add_argument(
-        "-wa",
-        "--about-changer",
-        action="store_true",
-        help="Changes the about section")
+        help="Download the media of the target's contact")
 
     group.add_argument(
         "-wgn",
@@ -129,10 +93,46 @@ def get_arg_parser():
         help="Get profile photo of all your contacts")
 
     group.add_argument(
-        "-wbc",
-        "--broadcast",
+        "-wi",
+        "--chat-intermediator",
         action="store_true",
-        help="Broadcast message")
+        help='Be an Intermediator from command line -wi -s <sender> -r <receiver> ')
+
+    group.add_argument(
+        "-wms",
+        "--message-service",
+        action="store_true",
+        help="send messages from a JSON file")
+
+    group.add_argument(
+        "-wpd",
+        "--profile-download",
+        action="store_true",
+        help='Download the peofile picture of target')
+
+    group.add_argument(
+        "-ws",
+        "--schedule-message",
+        action="store_true",
+        help="send the message at scheduled time")
+
+    group.add_argument(
+        "-wsc",
+        "--save-chat",
+        action="store_true",
+        help="save all chats from Google Drive, target is necessary")
+
+    group.add_argument(
+        "-wt",
+        "--online-tracker",
+        action="store_true",
+        help="track online status of person")
+
+    group.add_argument(
+        "-wtb",
+        "--telegram-bot",
+        action="store_true",
+        help="sends tracking status to telegram bot")
 
     group.add_argument(
         "-wtf",
@@ -141,10 +141,10 @@ def get_arg_parser():
         help="finds the information about target's contact")
 
     group.add_argument(
-        "-wd",
-        "--download-media",
+        "-wti",
+        "--message-timer",
         action="store_true",
-        help="Download the media of the target's contact")
+        help="send messages from time to time")
 
     return parser
 
